@@ -5,14 +5,15 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/oneqana-vivid-showcase/', // needed for GitHub Pages
+  base: mode === 'production' ? '/oneqana-vivid-showcase/' : '/',
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(), // only in dev
+    mode === 'development' &&
+    componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -20,5 +21,3 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
-
-
