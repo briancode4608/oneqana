@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://briancode4608.github.io/oneqana-vivid-showcase-main",
+  "homepage": "https://briancode4608.github.io/oneqana",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
